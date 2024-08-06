@@ -3,7 +3,6 @@
 // import 'package:flutter_scanqr/bloc/auth/auth_bloc.dart';
 // import 'package:flutter_scanqr/routes/router.dart';
 
-
 // class LoginPage extends StatelessWidget {
 //   LoginPage({super.key});
 
@@ -33,6 +32,7 @@
 //                 border: OutlineInputBorder(
 //                   borderRadius: BorderRadius.circular(20),
 //                 ),
+//                 labelText: 'Email',
 //               ),
 //             ),
 //             const SizedBox(height: 20),
@@ -44,6 +44,7 @@
 //                 border: OutlineInputBorder(
 //                   borderRadius: BorderRadius.circular(20),
 //                 ),
+//                 labelText: 'Password',
 //               ),
 //             ),
 //             const SizedBox(height: 25),
@@ -59,6 +60,7 @@
 //               child: BlocConsumer<AuthBloc, AuthState>(
 //                 listener: (context, state) {
 //                   if (state is AuthStateLogin) {
+//                     print('User ID Token: ${state.idToken}');
 //                     context.goNamed(Routes.home);
 //                   }
 //                   if (state is AuthStateError) {
@@ -96,14 +98,24 @@
 //                   }
 //                 },
 //               ),
-//             )
+//             ),
+//             const SizedBox(height: 20),
+//             TextButton(
+//               onPressed: () {
+//                 // context.goNamed(Routes.register);
+//                 context.goNamed(Routes.register);
+//               },
+//               child: const Text(
+//                 "Belum punya akun? Register di sini.",
+//                 style: TextStyle(color: Colors.blue),
+//               ),
+//             ),
 //           ],
 //         ),
 //       ),
 //     );
 //   }
 // }
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_scanqr/bloc/auth/auth_bloc.dart';
@@ -204,7 +216,17 @@ class LoginPage extends StatelessWidget {
                   }
                 },
               ),
-            )
+            ),
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: () {
+                context.goNamed(Routes.register);
+              },
+              child: const Text(
+                "Belum punya akun? Register di sini.",
+                style: TextStyle(color: Colors.blue),
+              ),
+            ),
           ],
         ),
       ),

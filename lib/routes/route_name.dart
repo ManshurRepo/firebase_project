@@ -7,4 +7,5 @@ abstract class Routes {
   static const addProduct = 'add_product';
   static const error = 'error';
   static const login = 'login';
+  static const register = 'register';
 }
