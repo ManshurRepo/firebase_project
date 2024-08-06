@@ -18,6 +18,12 @@
 
 //   AuthStateError(this.message);
 // }
+
+// class AuthStateRegisterSuccess extends AuthState {
+//   final String idToken;
+
+//   AuthStateRegisterSuccess(this.idToken);
+// }
 part of 'auth_bloc.dart';
 
 abstract class AuthState {}
@@ -38,8 +44,6 @@ class AuthStateError extends AuthState {
   AuthStateError(this.message);
 }
 
-class AuthStateRegisterSuccess extends AuthState {
-  final String idToken;
+class AuthStateRegisterSuccess extends AuthState {}
 
-  AuthStateRegisterSuccess(this.idToken);
-}
+class AuthStateEmailNotVerified extends AuthState {}

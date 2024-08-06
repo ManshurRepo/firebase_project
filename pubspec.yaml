@@ -44,6 +44,20 @@ dependencies:
   pdf: ^3.3.0
   qr_flutter: ^4.1.0
 
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+
+  color: "#FFFFFF"
+  image: "assets/images/logo.png"
+  branding: "assets/images/branding.png"
+
+  android_12:
+    color: "#FFFFFF"
+    image: "assets/images/logo.png"
+    branding: "assets/images/branding.png"
+     
 dev_dependencies:
   flutter_lints: ^3.0.0
   flutter_test:

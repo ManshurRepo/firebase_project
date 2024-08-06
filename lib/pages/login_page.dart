@@ -125,9 +125,9 @@ class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
   final TextEditingController emailController =
-      TextEditingController(text: "admin@gmail.com");
+      TextEditingController(text: "");
   final TextEditingController passwordController =
-      TextEditingController(text: "tesadmin_123");
+      TextEditingController(text: "");
 
   @override
   Widget build(BuildContext context) {
